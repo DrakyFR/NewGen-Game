@@ -97,7 +97,6 @@ header nav ul li a:hover {
 .page h1 {
     font-size: 70px;
     margin-bottom: 20px;
-
 }
 
 .page p {
@@ -127,61 +126,46 @@ main a:hover {
     border-radius: 10px;
     background-color: #121212;
     border: 2px solid #ff4500;
-
 }
 
-.video-background {
-    position: fixed;
-    /* Laisse la vidéo en place même lors du défilement */
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Prend toute la largeur de la fenêtre */
-    height: 100%;
-    /* Prend toute la hauteur de la fenêtre */
+/* Nouvelle section pour la vidéo */
+.video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Ajustez la hauteur selon vos préférences */
+    background-color: #121212;
     overflow: hidden;
-    /* Cache les parties de la vidéo qui débordent */
-    z-index: -1;
-    /* Place la vidéo derrière le contenu */
 }
 
-/* Vidéo en arrière-plan */
+.rectangle {
+    width: 80%; /* Largeur de la vidéo */
+    height: 100%; /* Remplit la hauteur du conteneur */
+}
+
 #background-video {
-    object-fit: cover;
-    /* Permet à la vidéo de remplir l'écran sans déformation */
     width: 100%;
-    /* Prend toute la largeur de la fenêtre */
     height: 100%;
-    /* Prend toute la hauteur de la fenêtre */
+    object-fit: cover; /* Permet à la vidéo de couvrir la zone sans déformation */
 }
 
 /* Pied de page */
 footer {
-    margin-top: 500px;
+    margin-top: 50px;
     padding: 20px;
     background-color: #1b1b1b;
     text-align: center;
-}
-
-.quarter-circle {
-    position: fixed;
-    background: #ff4500;
-    bottom: 0;
-    right: 0;
-    width: 600px;
-    height: 600px;
-    border-top-left-radius: 100%;
 }
 
 .quarter-circle-img {
     position: fixed;
     bottom: 0;
     right: 0;
+
 }
 
 .quarter-circle-img img {
-    width: 90%;
-    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -193,7 +177,6 @@ footer {
 
 /* Rebond des points (chargement) */
 @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -227,7 +210,6 @@ footer {
 /* ------------------------------------------------------------------------ MEDIA QUERIES --------------------------------------------------------------------------------------*/
 
 @media all and (max-width: 768px) {
-
     header {
         flex-direction: column;
         text-align: center;
@@ -241,7 +223,6 @@ footer {
     header ul li {
         text-align: center;
         align-items: center;
-
     }
 
     .page {
@@ -251,29 +232,29 @@ footer {
 
     .page h1 {
         font-size: 40px;
-        padding: 100x;
+        padding: 10px;
     }
 
     .page p {
         font-size: 20px;
         font-weight: lighter;
-
     }
 
     .quarter-circle-img {
         display: none;
     }
-
-
 }
 
-
 @media all and (max-width: 1024px) {
-
     header {
         display: flex;
     }
 
-
+    .quarter-circle-img {
+        display: none;
+    }
+    
+    
+    
 
 }
