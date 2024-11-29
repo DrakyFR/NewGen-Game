@@ -1,0 +1,260 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Le loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    animation: fadeOut 3s forwards;
+    animation-delay: 1s;
+}
+
+#loader h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+#loader h1 span {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+#loader h1 span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#loader h1 span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#loader h1 span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Corps de la page */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+}
+
+header .header {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ff4500;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    background-color: #1b1b1b;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff4500;
+    border-radius: 20px;
+    border: 2px solid #ff4500;
+}
+
+/* Section d'introduction */
+.page {
+    text-align: center;
+    padding: 100px 20px;
+    color: #ff0000;
+}
+
+.page h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.page p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+main a {
+    text-decoration: none;
+    background-color: #ff4500;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    border: 2px solid #ff4500;
+}
+
+main a:hover {
+    color: white;
+    border-radius: 10px;
+    background-color: #121212;
+    border: 2px solid #ff4500;
+}
+
+/* Nouvelle section pour la vidéo */
+.video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Ajustez la hauteur selon vos préférences */
+    background-color: #121212;
+    overflow: hidden;
+}
+
+.rectangle {
+    width: 80%; /* Largeur de la vidéo */
+    height: 100%; /* Remplit la hauteur du conteneur */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permet à la vidéo de couvrir la zone sans déformation */
+}
+
+/* Pied de page */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1b1b1b;
+    text-align: center;
+}
+
+.quarter-circle-img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+}
+
+.quarter-circle-img img {
+    transition: 0.5s;
+}
+
+.quarter-circle-img img:hover {
+    transform: scale(0.75);
+}
+
+/* ---------------------------------------------------------------------- ANIMATIONS ---------------------------------------------------------------------------------------------*/
+
+/* Rebond des points (chargement) */
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animation de disparition (loader)*/
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ------------------------------------------------------------------------ MEDIA QUERIES --------------------------------------------------------------------------------------*/
+
+@media all and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 7% 6%;
+    }
+
+    .header {
+        padding: 20px 100px;
+    }
+
+    header ul li {
+        text-align: center;
+        align-items: center;
+    }
+
+    .page {
+        width: 100%;
+        padding: 80px 20px;
+    }
+
+    .page h1 {
+        font-size: 40px;
+        padding: 10px;
+    }
+
+    .page p {
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .quarter-circle-img {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    header {
+        display: flex;
+    }
+
+    .quarter-circle-img {
+        display: none;
+    }
+    
+    
+    
+
+}
