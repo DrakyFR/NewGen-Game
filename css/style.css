@@ -24,139 +24,26 @@
     animation-delay: 1s;
 }
 
-/* Loader 3D tower */
-.loader {
-    scale: 3;
-    height: 50px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#loader h1 {
+    color: white;
+    font-size: 2rem;
 }
 
-.box {
-    position: relative;
-    opacity: 0;
-    left: 10px;
+#loader h1 span {
+    display: inline-block;
+    animation: bounce 2s infinite;
 }
 
-.side-left,
-.side-right {
-    position: absolute;
-    width: 19px;
-    height: 5px;
-    transform: skew(0deg, -25deg);
-    top: 14px;
+#loader h1 span:nth-child(1) {
+    animation-delay: 0s;
 }
 
-.side-left {
-    background-color: #286cb5;
-    left: 10px;
+#loader h1 span:nth-child(2) {
+    animation-delay: 0.2s;
 }
 
-.side-right {
-    background-color: #2f85e0;
-    left: -9px;
-}
-
-.side-top {
-    position: absolute;
-    background-color: #5fa8f5;
-    width: 20px;
-    height: 20px;
-    transform: rotate(45deg) skew(-20deg, -20deg);
-}
-
-.box-1 {
-    animation: from-left 4s infinite;
-}
-
-.box-2 {
-    animation: from-right 4s infinite;
-    animation-delay: 1s;
-}
-
-.box-3 {
-    animation: from-left 4s infinite;
-    animation-delay: 2s;
-}
-
-.box-4 {
-    animation: from-right 4s infinite;
-    animation-delay: 3s;
-}
-
-/* Animation des boxes */
-@keyframes from-left {
-    0% {
-        z-index: 20;
-        opacity: 0;
-        translate: -20px -6px;
-    }
-
-    20% {
-        z-index: 10;
-        opacity: 1;
-        translate: 0px 0px;
-    }
-
-    40% {
-        z-index: 9;
-        translate: 0px 4px;
-    }
-
-    60% {
-        z-index: 8;
-        translate: 0px 8px;
-    }
-
-    80% {
-        z-index: 7;
-        opacity: 1;
-        translate: 0px 12px;
-    }
-
-    100% {
-        z-index: 5;
-        translate: 0px 30px;
-        opacity: 0;
-    }
-}
-
-@keyframes from-right {
-    0% {
-        z-index: 20;
-        opacity: 0;
-        translate: 20px -6px;
-    }
-
-    20% {
-        z-index: 10;
-        opacity: 1;
-        translate: 0px 0px;
-    }
-
-    40% {
-        z-index: 9;
-        translate: 0px 4px;
-    }
-
-    60% {
-        z-index: 8;
-        translate: 0px 8px;
-    }
-
-    80% {
-        z-index: 7;
-        opacity: 1;
-        translate: 0px 12px;
-    }
-
-    100% {
-        z-index: 5;
-        translate: 0px 30px;
-        opacity: 0;
-    }
+#loader h1 span:nth-child(3) {
+    animation-delay: 0.4s;
 }
 
 /* Corps de la page */
@@ -263,6 +150,99 @@ main a:hover {
     object-fit: cover; /* Permet à la vidéo de couvrir la zone sans déformation */
 }
 
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #121212;
+}
+
+.wrapper h1{
+    font-size: 3em;
+    margin: 25px 0;
+    text-align: center;
+    font-weight: 600;
+    color: #ff4500;
+
+}
+
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+
+.card{
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    
+}
+
+.card i{
+    margin: 20px;
+    color: #ff5724;
+}
+
+.card h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.card p{
+    color: #6c757d;
+    text-align: center;
+}
+
+
+
+.card:hover i,
+.card:hover p{
+    color: #fff;
+}
+
+.card:hover h2{
+    font-size: 600;
+    color: #ff5724;
+}
+
+.card:nth-child(1):hover{
+    background:linear-gradient(45deg,
+                                rgba(255,28,8,0,7) 0%,
+                                rgba(255,0,82,0,7) 100%),
+                                url('img/BO6_LP-meta_image.jpg');
+    background-size: cover;
+}
+
+.card:nth-child(2):hover{
+    background:linear-gradient(45deg,
+                                rgba(255,28,8,0,7) 0%,
+                                rgba(255,0,82,0,7) 100%),
+                                url("img/dbsz-announcement-thumbnail.jpg");
+    background-size: cover;
+}
+
+.card:nth-child(3):hover{
+    background:linear-gradient(45deg,
+                                rgba(255,28,8,0,7) 0%,
+                                rgba(255,0,82,0,7) 100%),
+                                url('img/033c7bb585e77eb89fedee2376e900f8ff9be448.jpg');
+    background-size: cover;
+}
+
 /* Pied de page */
 footer {
     margin-top: 50px;
@@ -275,6 +255,7 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
+
 }
 
 .quarter-circle-img img {
@@ -365,4 +346,25 @@ footer {
     .quarter-circle-img {
         display: none;
     }
+
+    .wrapper{
+        padding: 25px;
+    }
+    
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card{
+        min-width: 300px;
+        margin: 10px auto;
+    }
+    
+
 }
