@@ -129,7 +129,7 @@ main a:hover {
 }
 
 /* Nouvelle section pour la vidéo */
-.video {
+.img {
     position: relative;
     display: flex;
     justify-content: center;
@@ -144,7 +144,7 @@ main a:hover {
     height: 100%; /* Remplit la hauteur du conteneur */
 }
 
-#background-video {
+#background-img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Permet à la vidéo de couvrir la zone sans déformation */
