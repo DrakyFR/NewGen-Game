@@ -578,6 +578,9 @@ footer {
         align-items: center;
     }
 
+    body{
+        background-image: none;
+    }
 
     .quarter-circle-img {
         display: none;
@@ -591,6 +594,7 @@ footer {
     footer{
         margin-top: 500px;
     }
+
     
 
 }

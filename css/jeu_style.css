@@ -434,6 +434,11 @@ footer {
         /* Réduire la taille des cartes sur les très petits écrans */
         height: 140px;
     }
+
+    footer{
+        margin-top: 545px;
+    }
+
 }
 
 
