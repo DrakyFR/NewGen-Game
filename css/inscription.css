@@ -56,8 +56,6 @@
     transform: rotate(45deg);
 }
 
-
-
 /* Box animations */
 @keyframes from-left {
     0% {
@@ -121,9 +119,9 @@
     }
 }
 
+/*_________________________________________code____________________________________________________________________*/
 
 
-/* Corps de la page */
 body {
     background-color: #121212;
     color: #ffffff;
@@ -164,167 +162,127 @@ header nav ul li a:hover {
     border: 2px solid #ff4500;
 }
 
-/* Section d'introduction */
-.page {
-    text-align: center;
-    padding: 100px 20px;
-    color: #ff0000;
-}
-
-.page h1 {
-    font-size: 70px;
-    margin-bottom: 20px;
-}
-
-.page p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.bouton {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-main a {
-    text-decoration: none;
-    background-color: #ff4500;
-    padding: 15px 30px;
-    font-size: 20px;
-    color: #ffffff;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-    border: 2px solid #ff4500;
-}
-
-main a:hover {
-    color: white;
-    border-radius: 10px;
-    background-color: #121212;
-    border: 2px solid #ff4500;
-}
-
-/* Nouvelle section pour la vidéo */
-.img {
+/*affichage de l'username*/ 
+.input__container {
+    margin-top: 40px;
+    margin-left: 50px;
     position: relative;
+    background: #f0f0f0;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 500px; /* Ajustez la hauteur selon vos préférences */
-    background-color: #121212;
-    overflow: hidden;
-}
-
-.rectangle {
-    width: 80%; /* Largeur de la vidéo */
-    height: 100%; /* Remplit la hauteur du conteneur */
-}
-
-#background-img {
+    gap: 15px;
+    border: 4px solid #000;
+    max-width: 350px;
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+    transform: rotateX(10deg) rotateY(-10deg);
+    perspective: 1000px;
+    box-shadow: 10px 10px 0 #000;
+  }
+  
+  .input__container:hover {
+    transform: rotateX(5deg) rotateY(1 deg) scale(1.05);
+    box-shadow: 25px 25px 0 -5px #e9b50b, 25px 25px 0 0 #000;
+  }
+  
+  .shadow__input {
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Permet à la vidéo de couvrir la zone sans déformation */
-}
-
-.wrapper{
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateZ(-50px);
+    background: linear-gradient(
+      45deg,
+      rgba(255, 107, 107, 0.4) 0%,
+      rgba(255, 107, 107, 0.1) 100%
+    );
+    filter: blur(20px);
+  }
+  
+  .input__button__shadow {
+    cursor: pointer;
+    border: 3px solid #000;
+    background: #e9b50b;
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background: #121212;
-}
-
-.wrapper h1{
-    font-size: 3em;
-    margin: 25px 0;
-    text-align: center;
-    font-weight: 600;
-    color: #ff4500;
-
-}
-
-.content-box{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 1000px;
-    margin-top: 30px;
-}
-
-.card{
-    min-height: 220px;
-    width: 320px;
-    padding: 30px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fff;
-    margin: 10px 4px;
-    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
-    transition: 0.3s;
-    
-}
-
-.card i{
-    margin: 20px;
-    color: #ff5724;
-}
-
-.card h2{
-    margin-bottom: 12px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.card p{
-    color: #6c757d;
-    text-align: center;
-}
-
-
-
-.card:hover i,
-.card:hover p{
-    color: #fff;
-}
-
-.card:hover h2{
-    font-size: 600;
-    color: #ff5724;
-}
-
-.card:nth-child(1):hover{
-    background: linear-gradient(45deg,
-                                rgba(255, 136, 0, 0.7) 0%,
-                                rgba(0, 0, 0, 0.7) 100%),
-                                url('../img/BO6_LP-meta_image.jpg');
-    background-size: cover;
-}
-
-.card:nth-child(2):hover{
-    align-items: center;
-    background: linear-gradient(45deg,
-                                rgba(30, 113, 209, 0.7) 0%,
-                                rgba(255, 251, 0, 0.7) 100%),
-                                url("../img/dbsz-announcement-thumbnail.jpg");
-    background-size: cover;
-}
-
-.card:nth-child(3):hover{
-    background: linear-gradient(45deg,
-                                rgba(255, 217, 0, 0.7) 0%,
-                                rgba(255, 255, 255, 0.7) 100%),
-                                url('../img/033c7bb585e77eb89fedee2376e900f8ff9be448.jpg');
-    background-size: cover;
-}
+    padding: 10px;
+    transform: translateZ(20px);
+    position: relative;
+    z-index: 3;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .input__button__shadow:hover {
+    background: #e9b50b;
+    transform: translateZ(10px) translateX(-5px) translateY(-5px);
+    box-shadow: 5px 5px 0 0 #000;
+  }
+  
+  .input__button__shadow svg {
+    fill: #000;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .input__search {
+    width: 100%;
+    outline: none;
+    border: 3px solid #000;
+    padding: 15px;
+    font-size: 18px;
+    background: #fff;
+    color: #000;
+    transform: translateZ(10px);
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    z-index: 3;
+    font-family: "Roboto", Arial, sans-serif;
+    letter-spacing: -0.5px;
+  }
+  
+  .input__search::placeholder {
+    color: #666;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .input__search:hover,
+  .input__search:focus {
+    background: #f0f0f0;
+    transform: translateZ(20px) translateX(-5px) translateY(-5px);
+    box-shadow: 5px 5px 0 0 #000;
+  }
+  
+  .input__container::before {
+    content: "USERNAME";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: #e9b50b;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 14px;
+    transform: translateZ(50px);
+    z-index: 4;
+    border: 2px solid #000;
+  }
+  
+  
 
 
 /* Pied de page */
 footer {
-    margin-top: 50px;
+    bottom: 0;
+    margin-top: 500px;
     padding: 20px;
     background-color: #1b1b1b;
     text-align: center;
@@ -345,9 +303,41 @@ footer {
     transform: scale(0.75);
 }
 
+/* ---------------------------------------------------------------------- ANIMATIONS ---------------------------------------------------------------------------------------------*/
 
+/* Rebond des points (chargement) */
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
 
-/* ------------------------------------------------------------------------ Telephone et teblette --------------------------------------------------------------------------------------*/
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animation de disparition (loader)*/
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ------------------------------------------------------------------------ MEDIA QUERIES --------------------------------------------------------------------------------------*/
 
 @media all and (max-width: 768px) {
     header {
@@ -365,20 +355,6 @@ footer {
         align-items: center;
     }
 
-    .page {
-        width: 100%;
-        padding: 80px 20px;
-    }
-
-    .page h1 {
-        font-size: 40px;
-        padding: 10px;
-    }
-
-    .page p {
-        font-size: 20px;
-        font-weight: lighter;
-    }
 
     .quarter-circle-img {
         display: none;
@@ -394,24 +370,6 @@ footer {
         display: none;
     }
 
-    .wrapper{
-        padding: 25px;
-    }
-    
-    .wrapper h1{
-        font-size: 2.5em;
-        font-weight: 600;
-    }
-
-    .content-box{
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .card{
-        min-width: 300px;
-        margin: 10px auto;
-    }
     
 
 }
