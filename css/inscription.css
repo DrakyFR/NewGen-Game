@@ -8,18 +8,24 @@
 
 /* Loader */
 .loader {
-    position: fixed; /* Le loader doit être fixe */
+    position: fixed;
+    /* Le loader doit être fixe */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Remplir l'écran entier */
+    height: 100vh;
+    /* Remplir l'écran entier */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0); /* Fond semi-transparent */
-    z-index: 9999; /* Assurez-vous qu'il soit au-dessus de tout le contenu */
-    animation: fadeOut 3s forwards; /* Animation de disparition */
-    animation-delay: 2s; /* Le loader disparait après 2 secondes */
+    background-color: rgba(0, 0, 0);
+    /* Fond semi-transparent */
+    z-index: 9999;
+    /* Assurez-vous qu'il soit au-dessus de tout le contenu */
+    animation: fadeOut 3s forwards;
+    /* Animation de disparition */
+    animation-delay: 2s;
+    /* Le loader disparait après 2 secondes */
 }
 
 .box {
@@ -32,7 +38,9 @@
     align-items: center;
 }
 
-.side-left, .side-right, .side-top {
+.side-left,
+.side-right,
+.side-top {
     position: absolute;
     width: 19px;
     height: 5px;
@@ -62,10 +70,12 @@
         opacity: 0;
         transform: translateX(-20px);
     }
+
     20% {
         opacity: 1;
         transform: translateX(0);
     }
+
     100% {
         opacity: 0;
         transform: translateX(20px);
@@ -77,10 +87,12 @@
         opacity: 0;
         transform: translateX(20px);
     }
+
     20% {
         opacity: 1;
         transform: translateX(0);
     }
+
     100% {
         opacity: 0;
         transform: translateX(-20px);
@@ -113,6 +125,7 @@
         opacity: 1;
         visibility: visible;
     }
+
     100% {
         opacity: 0;
         visibility: hidden;
@@ -123,10 +136,10 @@
 
 
 body {
+    background-image: url(../img/ps-background-a8772e473e79151e46a7.png);
     background-color: #121212;
     color: #ffffff;
     font-family: Arial, sans-serif;
-    background-image: url(../img/ps-background-a8772e473e79151e46a7.png);
 }
 
 /* En-tête */
@@ -163,7 +176,7 @@ header nav ul li a:hover {
     border: 2px solid #ff4500;
 }
 
-/*affichage de l'username*/ 
+/*affichage de l'username*/
 .input__container {
     margin-top: 40px;
     margin-left: 50px;
@@ -181,14 +194,14 @@ header nav ul li a:hover {
     transform: rotateX(10deg) rotateY(-10deg);
     perspective: 1000px;
     box-shadow: 10px 10px 0 #000;
-  }
-  
-  .input__container:hover {
+}
+
+.input__container:hover {
     transform: rotateX(5deg) rotateY(1 deg) scale(1.05);
     box-shadow: 25px 25px 0 -5px #e9b50b, 25px 25px 0 0 #000;
-  }
-  
-  .shadow__input {
+}
+
+.shadow__input {
     content: "";
     position: absolute;
     width: 100%;
@@ -197,15 +210,13 @@ header nav ul li a:hover {
     bottom: 0;
     z-index: -1;
     transform: translateZ(-50px);
-    background: linear-gradient(
-      45deg,
-      rgba(255, 107, 107, 0.4) 0%,
-      rgba(255, 107, 107, 0.1) 100%
-    );
+    background: linear-gradient(45deg,
+            rgba(255, 107, 107, 0.4) 0%,
+            rgba(255, 107, 107, 0.1) 100%);
     filter: blur(20px);
-  }
-  
-  .input__button__shadow {
+}
+
+.input__button__shadow {
     cursor: pointer;
     border: 3px solid #000;
     background: #e9b50b;
@@ -219,21 +230,21 @@ header nav ul li a:hover {
     z-index: 3;
     font-weight: bold;
     text-transform: uppercase;
-  }
-  
-  .input__button__shadow:hover {
+}
+
+.input__button__shadow:hover {
     background: #e9b50b;
     transform: translateZ(10px) translateX(-5px) translateY(-5px);
     box-shadow: 5px 5px 0 0 #000;
-  }
-  
-  .input__button__shadow svg {
+}
+
+.input__button__shadow svg {
     fill: #000;
     width: 25px;
     height: 25px;
-  }
-  
-  .input__search {
+}
+
+.input__search {
     width: 100%;
     outline: none;
     border: 3px solid #000;
@@ -247,22 +258,22 @@ header nav ul li a:hover {
     z-index: 3;
     font-family: "Roboto", Arial, sans-serif;
     letter-spacing: -0.5px;
-  }
-  
-  .input__search::placeholder {
+}
+
+.input__search::placeholder {
     color: #666;
     font-weight: bold;
     text-transform: uppercase;
-  }
-  
-  .input__search:hover,
-  .input__search:focus {
+}
+
+.input__search:hover,
+.input__search:focus {
     background: #f0f0f0;
     transform: translateZ(20px) translateX(-5px) translateY(-5px);
     box-shadow: 5px 5px 0 0 #000;
-  }
-  
-  .input__container::before {
+}
+
+.input__container::before {
     content: "USERNAME";
     position: absolute;
     top: -15px;
@@ -275,23 +286,34 @@ header nav ul li a:hover {
     transform: translateZ(50px);
     z-index: 4;
     border: 2px solid #000;
-  }
-  
-  /*Formulaire d'inscription*/ 
+}
+
+/*Formulaire*/
 .wrapper {
-    --input-focus: #2d8cf0;
-    --font-color: #ff5724;
-    --font-color-sub: #ff5724;
+    --input-focus: #ff4500;
+    --font-color: #ff4500;
+    --font-color-sub: #ff4500;
     --bg-color: #fff;
-    --bg-color-alt: #666;
-    --main-color: #323232;
-      /* display: flex; */
-      /* flex-direction: column; */
-      /* align-items: center; */
-  }
-  /* switch card */
-  .switch {
-    transform: translateY(-200px);
+    --bg-color-alt: #ff4500;
+    --main-color: #ff4500;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    /* Hauteur de la page */
+    margin: 0;
+    /* Supprime les marges */
+    padding: 0;
+    /* Supprime les paddings */
+
+}
+
+/* switch card */
+.switch {
+    transform: none; /* Supprime la translation verticale */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -300,9 +322,9 @@ header nav ul li a:hover {
     gap: 30px;
     width: 50px;
     height: 20px;
-  }
-  
-  .card-side::before {
+}
+
+.card-side::before {
     position: absolute;
     content: 'Log in';
     left: -70px;
@@ -311,9 +333,9 @@ header nav ul li a:hover {
     text-decoration: underline;
     color: var(--font-color);
     font-weight: 600;
-  }
-  
-  .card-side::after {
+}
+
+.card-side::after {
     position: absolute;
     content: 'Sign up';
     left: 70px;
@@ -322,15 +344,15 @@ header nav ul li a:hover {
     text-decoration: none;
     color: var(--font-color);
     font-weight: 600;
-  }
-  
-  .toggle {
+}
+
+.toggle {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     box-sizing: border-box;
     border-radius: 5px;
     border: 2px solid var(--main-color);
@@ -343,9 +365,9 @@ header nav ul li a:hover {
     bottom: 0;
     background-color: var(--bg-colorcolor);
     transition: 0.3s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     box-sizing: border-box;
     position: absolute;
     content: "";
@@ -358,48 +380,49 @@ header nav ul li a:hover {
     background-color: var(--bg-color);
     box-shadow: 0 3px 0 var(--main-color);
     transition: 0.3s;
-  }
-  
-  .toggle:checked + .slider {
+}
+
+.toggle:checked+.slider {
     background-color: var(--input-focus);
-  }
-  
-  .toggle:checked + .slider:before {
+}
+
+.toggle:checked+.slider:before {
     transform: translateX(30px);
-  }
-  
-  .toggle:checked ~ .card-side:before {
+}
+
+.toggle:checked~.card-side:before {
     text-decoration: none;
-  }
-  
-  .toggle:checked ~ .card-side:after {
+}
+
+.toggle:checked~.card-side:after {
     text-decoration: underline;
-  }
-  
-  /* card */ 
-  
-  .flip-card__inner {
+}
+
+/* card */
+
+.flip-card__inner {
     width: 300px;
     height: 350px;
     position: relative;
     background-color: transparent;
     perspective: 1000px;
-      /* width: 100%;
+    /* width: 100%;
       height: 100%; */
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
-  
-  .toggle:checked ~ .flip-card__inner {
+}
+
+.toggle:checked~.flip-card__inner {
     transform: rotateY(180deg);
-  }
-  
-  .toggle:checked ~ .flip-card__front {
+}
+
+.toggle:checked~.flip-card__front {
     box-shadow: none;
-  }
-  
-  .flip-card__front, .flip-card__back {
+}
+
+.flip-card__front,
+.flip-card__back {
     padding: 20px;
     position: absolute;
     display: flex;
@@ -407,34 +430,34 @@ header nav ul li a:hover {
     justify-content: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background: lightgrey;
+    background: #121212;
     gap: 20px;
     border-radius: 5px;
     border: 2px solid var(--main-color);
     box-shadow: 4px 4px var(--main-color);
-  }
-  
-  .flip-card__back {
+}
+
+.flip-card__back {
     width: 100%;
     transform: rotateY(180deg);
-  }
-  
-  .flip-card__form {
+}
+
+.flip-card__form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-  }
-  
-  .title {
+}
+
+.title {
     margin: 20px 0 20px 0;
     font-size: 25px;
     font-weight: 900;
     text-align: center;
     color: var(--main-color);
-  }
-  
-  .flip-card__input {
+}
+
+.flip-card__input {
     width: 250px;
     height: 40px;
     border-radius: 5px;
@@ -446,23 +469,24 @@ header nav ul li a:hover {
     color: var(--font-color);
     padding: 5px 10px;
     outline: none;
-  }
-  
-  .flip-card__input::placeholder {
+}
+
+.flip-card__input::placeholder {
     color: var(--font-color-sub);
     opacity: 0.8;
-  }
-  
-  .flip-card__input:focus {
+}
+
+.flip-card__input:focus {
     border: 2px solid var(--input-focus);
-  }
-  
-  .flip-card__btn:active, .button-confirm:active {
+}
+
+.flip-card__btn:active,
+.button-confirm:active {
     box-shadow: 0px 0px var(--main-color);
     transform: translate(3px, 3px);
-  }
-  
-  .flip-card__btn {
+}
+
+.flip-card__btn {
     margin: 20px 0 20px 0;
     width: 120px;
     height: 40px;
@@ -474,16 +498,16 @@ header nav ul li a:hover {
     font-weight: 600;
     color: var(--font-color);
     cursor: pointer;
-  } 
-  
+}
 
 
 /* Pied de page */
 footer {
-    margin-top: 35%;
     bottom: 0;
+    margin-top: 560px;
     padding: 20px;
     background-color: #1b1b1b;
+    text-align: center;
 }
 
 .quarter-circle-img {
@@ -505,6 +529,7 @@ footer {
 
 /* Rebond des points (chargement) */
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -557,6 +582,17 @@ footer {
     .quarter-circle-img {
         display: none;
     }
+
+    .input__container {
+        margin-left: 5px;
+        margin-bottom: 25px;
+    }
+
+    footer{
+        margin-top: 500px;
+    }
+    
+
 }
 
 @media all and (max-width: 1024px) {
@@ -568,6 +604,6 @@ footer {
         display: none;
     }
 
-    
+
 
 }
