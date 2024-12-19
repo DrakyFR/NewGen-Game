@@ -298,26 +298,26 @@ main a:hover {
 
 .card:nth-child(1):hover{
     background: linear-gradient(45deg,
-                                rgba(255, 136, 0, 0.7) 0%,
+                                rgba(241, 21, 5, 0.7) 0%,
                                 rgba(0, 0, 0, 0.7) 100%),
-                                url('../img/BO6_LP-meta_image.jpg');
+                                url('../img/marvel-s-spider-man-2-pc-jeu-steam-cover.jpg');
     background-size: cover;
 }
 
 .card:nth-child(2):hover{
     align-items: center;
     background: linear-gradient(45deg,
-                                rgba(30, 113, 209, 0.7) 0%,
+                                rgba(206, 219, 16, 0.7) 0%,
                                 rgba(255, 251, 0, 0.7) 100%),
-                                url("../img/dbsz-announcement-thumbnail.jpg");
+                                url("../img/farming-simulator-25-pc-mac-jeu-steam-cover.jpg");
     background-size: cover;
 }
 
 .card:nth-child(3):hover{
     background: linear-gradient(45deg,
-                                rgba(255, 217, 0, 0.7) 0%,
-                                rgba(255, 255, 255, 0.7) 100%),
-                                url('../img/033c7bb585e77eb89fedee2376e900f8ff9be448.jpg');
+                                rgba(228, 102, 0, 0.7) 0%,
+                                rgba(255, 251, 0, 0.7) 100%),
+                                url('../img/elden-ring-l-ombre-de-l-arbre-monde-pc-jeu-steam-europe-cover.jpg');
     background-size: cover;
 }
 
