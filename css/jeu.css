@@ -204,29 +204,24 @@ header nav ul li a:hover {
 
 
 .inner {
-    --w: 200px;
-    --h: 250px;
-    --translateZ: calc((var(--w) + var(--h)) + 50px);
-    --rotateX: -15deg;
-    --perspective: 1000px;
     position: absolute;
-    width: var(--w);
-    height: var(--h);
+    width: 200px;
+    height: 250px;
     top: 20%;
-    left: calc(50% - (var(--w) / 2));
+    left: calc(50% - (200px / 2));
     z-index: 2;
     transform-style: preserve-3d;
-    transform: perspective(var(--perspective));
+    transform: perspective(1000px);
     animation: rotating 20s linear infinite;
 }
 
 @keyframes rotating {
     from {
-        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0);
+        transform: perspective(1000px) rotateX(-15deg) rotateY(0);
     }
 
     to {
-        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(1turn);
+        transform: perspective(1000px) rotateX(-15deg) rotateY(1turn);
     }
 }
 
@@ -237,7 +232,7 @@ header nav ul li a:hover {
     border: 2px solid rgba(var(--color-cadre));
     border-radius: 12px;
     overflow: hidden;
-    transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(var(--translateZ));
+    transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(calc((200px + 250px) + 50px));
 }
 
 .img {
