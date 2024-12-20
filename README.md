@@ -36,6 +36,6 @@ La page d'inscription n'est pas finie.
 
 ## projet final 📆
 
-- Voivi le lien de mon site web : http://newgengame.com/
+- Voivi le lien de mon site web : https://drakyfr.github.io/NewGen-Game/
 
 
