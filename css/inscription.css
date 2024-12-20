@@ -247,7 +247,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--bg-colorcolor);
+    background-color: var(--bg-color);
     transition: 0.3s;
 }
 
@@ -310,7 +310,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background: #121212;
     gap: 20px;
