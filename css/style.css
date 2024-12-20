@@ -297,7 +297,7 @@ main a:hover {
     background: linear-gradient(45deg,
                                 rgba(241, 21, 5, 0.7) 0%,
                                 rgba(0, 0, 0, 0.7) 100%),
-                                url(../img/marvel-s-spider-man-2-pc-jeu-steam-cover.jpg);
+                                url("../img/marvel-s-spider-man-2-pc-jeu-steam-cover.jpg");
     background-size: cover;
 }
 
@@ -306,7 +306,7 @@ main a:hover {
     background: linear-gradient(45deg,
                                 rgba(206, 219, 16, 0.7) 0%,
                                 rgba(255, 251, 0, 0.7) 100%),
-                                url(../img/farming-simulator-25-pc-mac-jeu-steam-cover.jpg);
+                                url("../img/farming-simulator-25-pc-mac-jeu-steam-cover.jpg");
     background-size: cover;
 }
 
@@ -314,7 +314,7 @@ main a:hover {
     background: linear-gradient(45deg,
                                 rgba(228, 102, 0, 0.7) 0%,
                                 rgba(255, 251, 0, 0.7) 100%),
-                                url(../img/elden-ring-l-ombre-de-l-arbre-monde-pc-jeu-steam-europe-cover.jpg);
+                                url("../img/elden-ring-l-ombre-de-l-arbre-monde-pc-jeu-steam-europe-cover.jpg");
     background-size: cover;
 }
 

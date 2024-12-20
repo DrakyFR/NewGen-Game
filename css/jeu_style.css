@@ -263,7 +263,7 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-image: url(../img/dragon-ball-sparking-zero-pc-jeu-steam-europe-cover.jpg);
+    background-image: url("../img/dragon-ball-sparking-zero-pc-jeu-steam-europe-cover.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -272,7 +272,7 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-image: url(../img/marvel-s-spider-man-2-pc-jeu-steam-cover.jpg);
+    background-image: url("../img/marvel-s-spider-man-2-pc-jeu-steam-cover.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -281,7 +281,7 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-image: url(../img/grand-theft-auto-vi-pc-jeu-rockstar-cover.jpg);
+    background-image: url("../img/grand-theft-auto-vi-pc-jeu-rockstar-cover.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -290,7 +290,7 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-image: url(../img/BLEACH-ROS-Wallpaper-Article.jpg);
+    background-image: url("../img/BLEACH-ROS-Wallpaper-Article.jpg");
     background-size: cover;
     background-position: center;
 }
