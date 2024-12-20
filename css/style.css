@@ -90,16 +90,16 @@
 }
 
 
-.box-1 {
+.box1 {
     animation: animation-gauche 4s infinite;
 }
 
-.box-2 {
+.box2 {
     animation: animation-droite 4s infinite;
     animation-delay: 1s;
 }
 
-.box-3 {
+.box3 {
     animation: animation-gauche 4s infinite;
     animation-delay: 2s;
 }
@@ -108,7 +108,6 @@
     animation: animation-droite 4s infinite;
     animation-delay: 3s;
 }
-
 
 @keyframes fadeOut {
     0% {
