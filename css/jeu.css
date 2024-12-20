@@ -254,7 +254,7 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-image: url('../img/farming-simulator-25-pc-mac-jeu-steam-cover.jpg');
+    background-image: url('../img/assassin-s-creed-shadows-pc-jeu-ubisoft-connect-cover.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -350,7 +350,7 @@ footer {
 
     .page h1 {
         font-size: 40px;
-        padding: 100x;
+        padding: 100px;
     }
 
     .page p {
