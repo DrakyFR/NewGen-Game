@@ -229,7 +229,7 @@ header nav ul li a:hover {
     position: absolute;
     width: 150px;
     height: 200px;
-    border: 2px solid rgba(var(--color-cadre));
+    border: 2px solid #ff4500;
     border-radius: 12px;
     overflow: hidden;
     transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(calc((200px + 250px) + 50px));
