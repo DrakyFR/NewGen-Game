@@ -6,28 +6,21 @@
     font-family: Arial, sans-serif;
 }
 
-/* Le loader */
-/* Loader */
+/* ---------------------------------Lodder avec universe io---------------------------------------*/
 
 .loader {
     position: fixed;
-    /* Le loader doit être fixe */
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    /* Remplir l'écran entier */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0);
-    /* Fond semi-transparent */
     z-index: 9999;
-    /* Assurez-vous qu'il soit au-dessus de tout le contenu */
     animation: fadeOut 3s forwards;
-    /* Animation de disparition */
     animation-delay: 2s;
-    /* Le loader disparait après 2 secondes */
 }
 
 .box {
@@ -66,7 +59,6 @@
     transform: rotate(45deg);
 }
 
-/* Box animations */
 @keyframes from-left {
     0% {
         opacity: 0;
@@ -101,7 +93,6 @@
     }
 }
 
-/* Animation for each box */
 .box-1 {
     animation: from-left 4s infinite;
 }
@@ -121,7 +112,6 @@
     animation-delay: 3s;
 }
 
-/* Animation de disparition du loader */
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -134,13 +124,15 @@
     }
 }
 
+/* ---------------------------------Toute la page---------------------------------------*/
 
 body {
     background-color: #121212;
     color: #ffffff;
 }
 
-/* En-tête */
+/* ---------------------------------Entête---------------------------------------*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -172,14 +164,14 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #ff4500;
-    /*Petite effet quand la souris passe sur les listes*/
     border-radius: 20px;
     border: 2px solid #ff4500;
     border-color: #ff4500;
 
 }
 
-/* Page principale */
+/* ---------------------------------Millieu de page---------------------------------------*/
+
 .page {
     text-align: center;
     padding: 135px;
@@ -195,7 +187,6 @@ header nav ul li a:hover {
     font-size: 20px;
 }
 
-/* les Jeux */
 .jeux h2 {
     text-align: center;
     font-size: 50px;
@@ -203,26 +194,21 @@ header nav ul li a:hover {
     margin-bottom: 50px;
 }
 
-/*Cadre de jeu de universe.io*/
+/* ---------------------------------carte qui tourne avec universe io---------------------------------------*/
 .wrapper {
     width: 100%;
     height: 400px;
-    /* Ajuster la hauteur selon tes besoins */
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    /* Ajouter un padding pour éviter que les cartes ne touchent les bords */
 }
 
 
-/* Ajustement de .inner */
 .inner {
     --w: 200px;
-    /* Largeur des cartes */
     --h: 250px;
-    /* Hauteur des cartes */
     --translateZ: calc((var(--w) + var(--h)) + 50px);
     --rotateX: -15deg;
     --perspective: 1000px;
@@ -230,16 +216,13 @@ header nav ul li a:hover {
     width: var(--w);
     height: var(--h);
     top: 20%;
-    /* Ajuster pour mieux centrer les cartes verticalement */
     left: calc(50% - (var(--w) / 2));
-    /* Centrer les cartes horizontalement */
     z-index: 2;
     transform-style: preserve-3d;
     transform: perspective(var(--perspective));
     animation: rotating 20s linear infinite;
 }
 
-/* Animation de la rotation */
 @keyframes rotating {
     from {
         transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0);
@@ -250,22 +233,16 @@ header nav ul li a:hover {
     }
 }
 
-/* .card - Les cartes elles-mêmes */
-/* Taille des cartes */
 .card {
     position: absolute;
     width: 150px;
-    /* Réduire la largeur des cartes */
     height: 200px;
-    /* Réduire la hauteur des cartes */
     border: 2px solid rgba(var(--color-card));
     border-radius: 12px;
     overflow: hidden;
     transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(var(--translateZ));
 }
 
-
-/* .img - Image ou fond des cartes */
 .img {
     width: 100%;
     height: 100%;
@@ -278,80 +255,51 @@ header nav ul li a:hover {
 
 .card .img1 {
     width: 100%;
-    /* Largeur de l'image = largeur de la carte */
     height: 100%;
-    /* Hauteur de l'image = hauteur de la carte */
     object-fit: cover;
-    /* L'image couvre entièrement l'espace de la carte */
     background-image: url('../img/BO6_LP-meta_image.jpg');
-    /* Remplace par le chemin de ton image */
     background-size: cover;
-    /* S'assurer que l'image couvre bien toute la carte */
     background-position: center;
-    /* Centrer l'image */
 }
 
 .card .img2 {
     width: 100%;
-    /* Largeur de l'image = largeur de la carte */
     height: 100%;
-    /* Hauteur de l'image = hauteur de la carte */
     object-fit: cover;
-    /* L'image couvre entièrement l'espace de la carte */
     background-image: url('../img/dragon-ball-sparking-zero-pc-jeu-steam-europe-cover.jpg');
-    /* Remplace par le chemin de ton image */
     background-size: cover;
-    /* S'assurer que l'image couvre bien toute la carte */
     background-position: center;
-    /* Centrer l'image */
 }
 
 .card .img3 {
     width: 100%;
-    /* Largeur de l'image = largeur de la carte */
     height: 100%;
-    /* Hauteur de l'image = hauteur de la carte */
     object-fit: cover;
-    /* L'image couvre entièrement l'espace de la carte */
     background-image: url('../img/dragon-age-veilguard-eacom-coming-soon-16x9.jpg.adapt.crop191x100.1200w.jpg');
-    /* Remplace par le chemin de ton image */
     background-size: cover;
-    /* S'assurer que l'image couvre bien toute la carte */
     background-position: center;
-    /* Centrer l'image */
 }
 
 .card .img4 {
     width: 100%;
-    /* Largeur de l'image = largeur de la carte */
     height: 100%;
-    /* Hauteur de l'image = hauteur de la carte */
     object-fit: cover;
-    /* L'image couvre entièrement l'espace de la carte */
     background-image: url('../img/grand-theft-auto-vi-pc-jeu-rockstar-cover.jpg');
-    /* Remplace par le chemin de ton image */
     background-size: cover;
-    /* S'assurer que l'image couvre bien toute la carte */
     background-position: center;
-    /* Centrer l'image */
 }
 
 .card .img5 {
     width: 100%;
-    /* Largeur de l'image = largeur de la carte */
     height: 100%;
-    /* Hauteur de l'image = hauteur de la carte */
     object-fit: cover;
-    /* L'image couvre entièrement l'espace de la carte */
     background-image: url('../img/BLEACH-ROS-Wallpaper-Article.jpg');
-    /* Remplace par le chemin de ton image */
     background-size: cover;
-    /* S'assurer que l'image couvre bien toute la carte */
     background-position: center;
-    /* Centrer l'image */
 }
 
-/* Pied de page */
+/* ---------------------------------Bas de la page---------------------------------------*/
+
 footer {
     margin-top: 300px;
     padding: 20px;
@@ -359,10 +307,25 @@ footer {
 
 }
 
+.mascotte {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+}
+
+.mascotte img {
+    transition: 0.5s;
+}
+
+.mascotte img:hover {
+    transform: scale(0.75);
+}
 
 
 
-/* ------------------------------------------------------------------------ MEDIA QUERIES --------------------------------------------------------------------------------------*/
+
+/* -----------------------------------------Telephone et tablette------------------------------------------*/
 
 @media all and (max-width: 768px) {
 
@@ -404,7 +367,6 @@ footer {
         grid-gap: 5% 5%;
     }
 
-    /* Effet d'agrandissement au survol */
     .jeu:hover {
         transform: scale(1.1);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
@@ -417,21 +379,16 @@ footer {
 
     .wrapper {
         height: 200px;
-        /* Encore plus petit si nécessaire */
     }
 
     .inner {
         --w: 120px;
-        /* Réduire encore plus la largeur des cartes */
         --h: 160px;
-        /* Réduire encore plus la hauteur des cartes */
         top: 5%;
-        /* Ajuster encore la position */
     }
 
     .card {
         width: 100px;
-        /* Réduire la taille des cartes sur les très petits écrans */
         height: 140px;
     }
 

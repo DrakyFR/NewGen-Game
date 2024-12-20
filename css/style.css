@@ -6,20 +6,21 @@
     font-family: Arial, sans-serif;
 }
 
-/* Loader */
+/* ---------------------------------Lodder de universe io---------------------------------------*/
+
 .loader {
-    position: fixed; /* Le loader doit être fixe */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Remplir l'écran entier */
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0); /* Fond semi-transparent */
-    z-index: 9999; /* Assurez-vous qu'il soit au-dessus de tout le contenu */
-    animation: fadeOut 3s forwards; /* Animation de disparition */
-    animation-delay: 2s; /* Le loader disparait après 2 secondes */
+    background-color: rgba(0, 0, 0); 
+    z-index: 9999; 
+    animation: fadeOut 3s forwards; 
+    animation-delay: 2s; 
 }
 
 .box {
@@ -32,24 +33,24 @@
     align-items: center;
 }
 
-.side-left, .side-right, .side-top {
+.gauche, .droite, .haut {
     position: absolute;
     width: 19px;
     height: 5px;
     top: 14px;
 }
 
-.side-left {
+.gauche {
     background-color: #286cb5;
     transform: skew(0deg, -25deg);
 }
 
-.side-right {
+.droite {
     background-color: #2f85e0;
     transform: skew(0deg, 25deg);
 }
 
-.side-top {
+.haut {
     background-color: #5fa8f5;
     width: 20px;
     height: 20px;
@@ -58,8 +59,7 @@
 
 
 
-/* Box animations */
-@keyframes from-left {
+@keyframes animation-gauche {
     0% {
         opacity: 0;
         transform: translateX(-20px);
@@ -74,7 +74,7 @@
     }
 }
 
-@keyframes from-right {
+@keyframes animation-droite {
     0% {
         opacity: 0;
         transform: translateX(20px);
@@ -89,27 +89,27 @@
     }
 }
 
-/* Animation for each box */
+
 .box-1 {
-    animation: from-left 4s infinite;
+    animation: animation-gauche 4s infinite;
 }
 
 .box-2 {
-    animation: from-right 4s infinite;
+    animation: animation-droite 4s infinite;
     animation-delay: 1s;
 }
 
 .box-3 {
-    animation: from-left 4s infinite;
+    animation: animation-gauche 4s infinite;
     animation-delay: 2s;
 }
 
 .box-4 {
-    animation: from-right 4s infinite;
+    animation: animation-droite 4s infinite;
     animation-delay: 3s;
 }
 
-/* Animation de disparition du loader */
+
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -122,15 +122,16 @@
 }
 
 
+/* ---------------------------------Toute la page---------------------------------------*/
 
-/* Corps de la page */
 body {
     background-color: #121212;
     color: #ffffff;
     font-family: Arial, sans-serif;
 }
 
-/* En-tête */
+/* ---------------------------------Entête---------------------------------------*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -164,7 +165,8 @@ header nav ul li a:hover {
     border: 2px solid #ff4500;
 }
 
-/* Section d'introduction */
+/* ---------------------------------millieu de la page---------------------------------------*/
+
 .page {
     text-align: center;
     padding: 100px 20px;
@@ -179,12 +181,6 @@ header nav ul li a:hover {
 .page p {
     font-size: 20px;
     margin-bottom: 30px;
-}
-
-.bouton {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 main a {
@@ -205,27 +201,29 @@ main a:hover {
     border: 2px solid #ff4500;
 }
 
-/* Nouvelle section pour la vidéo */
+/* ---------------------------------rectangle image---------------------------------------*/
 .img {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px; /* Ajustez la hauteur selon vos préférences */
+    height: 500px; 
     background-color: #121212;
     overflow: hidden;
 }
 
 .rectangle {
-    width: 80%; /* Largeur de la vidéo */
-    height: 100%; /* Remplit la hauteur du conteneur */
+    width: 80%; 
+    height: 100%; 
 }
 
 #background-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Permet à la vidéo de couvrir la zone sans déformation */
+    object-fit: cover; 
 }
+
+/* ---------------------------------cadre nos services---------------------------------------*/
 
 .wrapper{
     display: flex;
@@ -252,7 +250,7 @@ main a:hover {
     margin-top: 30px;
 }
 
-.card{
+.cadre{
     min-height: 220px;
     width: 320px;
     padding: 30px;
@@ -268,35 +266,35 @@ main a:hover {
     
 }
 
-.card i{
+.cadre i{
     margin: 20px;
     color: #ff5724;
 }
 
-.card h2{
+.cadre h2{
     margin-bottom: 12px;
     font-weight: 400;
     text-align: center;
 }
 
-.card p{
+.cadre p{
     color: #6c757d;
     text-align: center;
 }
 
 
 
-.card:hover i,
-.card:hover p{
+.cadre:hover i,
+.cadre:hover p{
     color: #fff;
 }
 
-.card:hover h2{
+.cadre:hover h2{
     font-size: 600;
     color: #ff5724;
 }
 
-.card:nth-child(1):hover{
+.cadre:nth-child(1):hover{
     background: linear-gradient(45deg,
                                 rgba(241, 21, 5, 0.7) 0%,
                                 rgba(0, 0, 0, 0.7) 100%),
@@ -304,7 +302,7 @@ main a:hover {
     background-size: cover;
 }
 
-.card:nth-child(2):hover{
+.cadre:nth-child(2):hover{
     align-items: center;
     background: linear-gradient(45deg,
                                 rgba(206, 219, 16, 0.7) 0%,
@@ -313,7 +311,7 @@ main a:hover {
     background-size: cover;
 }
 
-.card:nth-child(3):hover{
+.cadre:nth-child(3):hover{
     background: linear-gradient(45deg,
                                 rgba(228, 102, 0, 0.7) 0%,
                                 rgba(255, 251, 0, 0.7) 100%),
@@ -322,7 +320,7 @@ main a:hover {
 }
 
 
-/* Pied de page */
+/* ----------------------------------Bas de la page--------------------------------------*/
 footer {
     margin-top: 50px;
     padding: 20px;
@@ -330,18 +328,18 @@ footer {
     text-align: center;
 }
 
-.quarter-circle-img {
+.mascotte {
     position: fixed;
     bottom: 0;
     right: 0;
 
 }
 
-.quarter-circle-img img {
+.mascotte img {
     transition: 0.5s;
 }
 
-.quarter-circle-img img:hover {
+.mascotte img:hover {
     transform: scale(0.75);
 }
 
@@ -380,7 +378,7 @@ footer {
         font-weight: lighter;
     }
 
-    .quarter-circle-img {
+    .mascotte {
         display: none;
     }
 }
@@ -390,7 +388,7 @@ footer {
         display: flex;
     }
 
-    .quarter-circle-img {
+    .mascotte {
         display: none;
     }
 
@@ -408,7 +406,7 @@ footer {
         width: 100%;
     }
 
-    .card{
+    .cadre{
         min-width: 300px;
         margin: 10px auto;
     }
